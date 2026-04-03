@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click Faster Than AI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Click Faster Than AI</h1>
+      <p class="subtitle">Klikni rychleji než umělá inteligence.</p>
+
+      <section class="controls">
+        <button id="startButton" class="btn btn-primary">Start</button>
+        <button id="clickButton" class="btn btn-accent" disabled>Klikni teď!</button>
+        <button id="restartButton" class="btn btn-secondary">Restart</button>
+      </section>
+
+      <section class="status-card">
+        <p id="statusText">Stiskni Start a čekej na signál.</p>
+      </section>
+
+      <section class="results">
+        <div class="result-item">
+          <span>Tvůj čas:</span>
+          <strong id="userTime">—</strong>
+        </div>
+        <div class="result-item">
+          <span>Čas AI:</span>
+          <strong id="aiTime">—</strong>
+        </div>
+        <div class="result-item result-outcome">
+          <span>Výsledek:</span>
+          <strong id="winner">—</strong>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
