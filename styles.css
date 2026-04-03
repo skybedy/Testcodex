@@ -1,0 +1,123 @@
+:root {
+  --bg: #0f172a;
+  --panel: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --primary: #3b82f6;
+  --accent: #22c55e;
+  --secondary: #475569;
+  --danger: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  background: radial-gradient(circle at top, #1e293b, var(--bg));
+  color: var(--text);
+}
+
+.app {
+  width: min(92vw, 560px);
+  background: color-mix(in srgb, var(--panel) 90%, black);
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+.subtitle {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.btn {
+  border: none;
+  border-radius: 12px;
+  padding: 0.7rem 1rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease, opacity 0.2s ease;
+}
+
+.btn:hover:enabled {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--primary);
+}
+
+.btn-accent {
+  background: var(--accent);
+}
+
+.btn-secondary {
+  background: var(--secondary);
+}
+
+.status-card,
+.results {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+}
+
+.status-card {
+  margin-bottom: 0.9rem;
+}
+
+#statusText {
+  margin: 0;
+}
+
+.results {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.result-outcome strong {
+  color: #f8fafc;
+}
+
+.result-outcome .winner-user {
+  color: var(--accent);
+}
+
+.result-outcome .winner-ai {
+  color: var(--danger);
+}
